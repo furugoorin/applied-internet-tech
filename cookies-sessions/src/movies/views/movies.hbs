@@ -1,0 +1,31 @@
+<form action="/movies" method ="GET">
+    Director:<input type="text" name ="director">
+    <input type="submit" value="Filter">
+</form>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+  </tr>
+  {{#each movies}}
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">{{this.title}}</td>
+    <td style="text-align: center; vertical-align: middle;">{{this.year}}</td>
+    <td style="text-align: center; vertical-align: middle;">{{this.director}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+</body>
+
+<a href="/movies/add"><p style="text-align:center">Add Movie</p></a>
+<a href="/mymovies"><p style="text-align:center">See movies in session</p></a>

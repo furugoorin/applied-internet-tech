@@ -1,0 +1,28 @@
+<h1 style="text-align:center;">Movies in Session: {{movies}}</h1>
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+  </tr>
+  {{#each sessionMovies}}
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">{{this.title}}</td>
+    <td style="text-align: center; vertical-align: middle;">{{this.year}}</td>
+    <td style="text-align: center; vertical-align: middle;">{{this.director}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+</body>
+
+<a href="/movies"><p style="text-align:center">Return to Movies page</p></a>
