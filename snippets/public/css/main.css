@@ -1,0 +1,8 @@
+body.layout {
+    margin: auto;
+    text-align: center;
+}
+
+.button { 
+    display: inline-block;
+}

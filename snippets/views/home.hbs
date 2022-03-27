@@ -1,0 +1,28 @@
+<!-- Homepage displaying all the snippets -->
+
+<h2>My Snippets</h2>
+
+{{#if error}} 
+<h2>{{error}}</h2>
+{{/if}}
+
+<form action="/" method ="GET">
+    Min Lines:<input type="number" name ="lineQ">
+    Tag:<input type="text" name="tagQ">
+    Text:<input type="text" name="textQ">
+    <input type="submit" value="search">
+</form>
+
+{{#each snippets}}
+<p>{{this.name}} | Lines of code: {{this.lines}}</p>
+<ul>
+    <pre>{{this.code}}</pre>
+    <p>tags:</p>
+    {{#each this.tags}}
+        <li><a href="/?tagQ={{this}}">{{this}}</a></li>
+    {{/each}}
+</ul>
+{{/each}}
+
+
+
