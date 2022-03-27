@@ -1,7 +1,7 @@
 # Snippets 
 A site that aggregates and searches JavaScript code snippets. 
 
-Objectives: 
+## Objectives: 
 
 * serving static files
 * middleware
